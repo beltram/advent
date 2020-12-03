@@ -1,5 +1,5 @@
 fun day2Part2(): Int {
-    return input("day2-part2")
+    return input("day2")
         .split("\n")
         .filterNot { it.isBlank() }
         .map { it.trim().toPwd2() }
