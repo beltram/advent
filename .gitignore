@@ -1,0 +1,44 @@
+.gradle
+/build/
+lib/
+!gradle/wrapper/gradle-wrapper.jar
+/src/main/resources/static/
+*.hprof
+.DS_Store
+
+### JMETER ###
+*jmeter.log
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+### Redis ###
+dump.rdb
+
+### VisualStudioCode ###
+.vscode/*
+.history
+bin/
+
+### Spring ###
+spring-configuration-metadata.json
