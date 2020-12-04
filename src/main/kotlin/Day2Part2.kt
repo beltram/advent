@@ -8,7 +8,7 @@ fun day2Part2(): Int {
 }
 
 data class Pwd2(val posA: Int, val posB: Int, val letter: Char, val password: String) {
-    fun isValid() = satisfies(posA).xor(satisfies(posB))
+    fun isValid() = satisfies(posA) xor satisfies(posB)
     private fun satisfies(index: Int) = password.elementAtOrNull(index - 1)?.let { it == letter } ?: false
 }
 
