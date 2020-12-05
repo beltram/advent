@@ -1,9 +1,23 @@
-fun day5(): Int {
-    return input("day5")
-        .split("\n")
-        .map { Seat(it).id }
-        .maxOrNull()!!
+private fun seats() = input("day5").split("\n").map { Seat(it) }
+
+fun day5Part1() = seats().map { it.id }.maxOrNull()!!
+
+fun day5Part2(): Int {
+    val allSeats: List<Int> = (1 until 127)
+        .flatMap { r -> (0..7).map { c -> r to c } }
+        .map { (r, c) -> (r * 8) + c }
+    val actualSeats = seats().map { it.id }
+    val candidates = allSeats.filter { it !in actualSeats }
+    return candidates
+        .filterIndexed { idx, i -> candidates.hasContiguousNeighbours(idx, i).not() }
+        .first()
 }
+
+private fun List<Int>.hasContiguousNeighbours(index: Int, value: Int): Boolean {
+    return isContiguous(index - 1, value - 1) || isContiguous(index + 1, value + 1)
+}
+
+private fun List<Int>.isContiguous(index: Int, value: Int) = getOrNull(index)?.let { it == value } ?: false
 
 class Seat(private val input: String) {
 

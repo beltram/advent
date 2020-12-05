@@ -30,7 +30,7 @@ private fun getMap(): Map {
 }
 
 class Move(val right: Int, val down: Int)
-class Map(val rows: List<Row>) {
+private class Map(val rows: List<Row>) {
 
     private val maxAreaIndex by lazy { rows.last().areas.size }
 
