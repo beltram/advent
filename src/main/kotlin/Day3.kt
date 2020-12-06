@@ -8,13 +8,7 @@ fun day3Part1(): Int {
 }
 
 fun day3Part2(): Int {
-    val moves = setOf(
-        Move(1, 1),
-        Move(3, 1),
-        Move(5, 1),
-        Move(7, 1),
-        Move(1, 2),
-    )
+    val moves = setOf(1 to 1, 3 to 1, 5 to 1, 7 to 1, 1 to 2).map { (r, d) -> Move(r, d) }
     return getMap()
         .let { map -> moves.map { map.moving(it) } }
         .map { it.filter { it == TREE }.count() }
