@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.4.10"
+    kotlin("jvm") version "1.4.20"
 }
 
 group = "me.bmaldant"
@@ -21,6 +21,6 @@ tasks.test {
     useJUnitPlatform()
 }
 
-tasks.withType<KotlinCompile>() {
+tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "11"
 }
