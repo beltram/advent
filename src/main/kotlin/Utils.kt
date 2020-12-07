@@ -1,3 +1,1 @@
-private class Utils
-
-fun input(name: String) = Utils::class.java.getResource("$name.txt").readText()
+fun input(name: String) = object {}::class.java.getResource("$name.txt").readText()
