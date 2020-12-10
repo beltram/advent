@@ -24,7 +24,7 @@ fun day9Part2(): Int? {
 private fun List<Int>.weakness(fromIndex: Int, sum: Int): Int? {
     val candidates = drop(fromIndex)
     val range = candidates
-        .runningFold(0) { acc, i -> acc + i }
+        .runningReduce { acc, i -> acc + i }
         .indexOfFirst { it == sum }
         .takeUnless { it == -1 }
         ?.let { candidates.take(it) }

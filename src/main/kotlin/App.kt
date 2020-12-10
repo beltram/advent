@@ -15,5 +15,6 @@ fun main() {
 //    println("Day 8 (part 1): ${day8Part1()}")
 //    println("Day 8 (part 2): ${day8Part2()}")
 //    println("Day 9 (part 1): ${day9Part1()}")
-    println("Day 9 (part 2): ${day9Part2()}")
+//    println("Day 9 (part 2): ${day9Part2()}")
+    println("Day 10: ${day10()}")
 }
