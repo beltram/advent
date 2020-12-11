@@ -1,4 +1,4 @@
-private fun seats() = input("day5").split("\n").map { Seat(it) }
+private fun seats() = input("day5").split("\n").map { Seeat(it) }
 
 fun day5Part1() = seats().map { it.id }.maxOrNull()!!
 
@@ -19,7 +19,7 @@ private fun List<Int>.hasContiguousNeighbours(index: Int, value: Int): Boolean {
 
 private fun List<Int>.isContiguous(index: Int, value: Int) = getOrNull(index)?.let { it == value } ?: false
 
-class Seat(private val input: String) {
+private class Seeat(private val input: String) {
 
     val id: Int get() = (row * 8) + column
     private val row: Int get() = rowMoves.select((0..127).toList()).first()
